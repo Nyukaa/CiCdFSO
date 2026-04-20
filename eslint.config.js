@@ -13,6 +13,7 @@ module.exports = [
       "dist/**",
     ],
   },
+
   js.configs.recommended,
   {
     files: ["app.js"],
@@ -40,6 +41,14 @@ module.exports = [
     languageOptions: {
       globals: {
         ...globals.node,
+      },
+    },
+  },
+  {
+    files: ["playwright.config.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node, // require, module, process
       },
     },
   },
