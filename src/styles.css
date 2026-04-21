@@ -132,6 +132,7 @@ footer {
   display: flex;
   margin-top: 20px;
   text-transform: capitalize;
+  color: green;
 }
 
 .pokemon-ability {
