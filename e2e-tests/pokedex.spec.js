@@ -13,6 +13,6 @@ describe("Pokedex", () => {
   test("can navigate to pokemon page", async ({ page }) => {
     await page.goto("/");
     await page.getByText("ivysaur").click();
-    await expect(page.getByText("chlorophyll")).toBeVisible();
+    await expect(page.getByText("chlorophl")).toBeVisible();
   });
 });
