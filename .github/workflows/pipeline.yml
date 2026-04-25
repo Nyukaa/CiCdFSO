@@ -49,10 +49,17 @@ jobs:
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: >
-            ❌ Build failed!
+            ❌ Build failed! The pipeline encountered an error
+            Failure details
+            Repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
             Commit: ${{ github.sha }}
+            Message: ${{ github.event.head_commit.message }}
             Author: ${{ github.actor }}
-            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            Workflow: ${{ github.workflow }}
+            Job: simple_deployment_pipeline
+            View Commit: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+            View Workflow Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 
@@ -61,12 +68,13 @@ jobs:
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: >
-            ✅ Deployment successful!
+            ✅ Deployment successful! A new version deployed to production
+            Deployment details: https://github.com/${{ github.repository }}
             Commit: ${{ github.sha }}
+            Message: ${{ github.event.head_commit.message }}
             Author: ${{ github.actor }}
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-latest
