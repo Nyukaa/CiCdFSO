@@ -45,7 +45,7 @@ jobs:
         run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
 
       - name: Notify Discord on failure
-        if: failure() && github.event_name == 'push'
+        if: failure()
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: >
