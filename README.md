@@ -1,9 +1,14 @@
 # CI/CD Pipeline Project (Full Stack Open)
+This project was developed as part of the Full Stack Open CI/CD module. The main goal was to learn how to build a modern continuous integration and continuous       deployment pipeline using GitHub Actions and Render.
 
-This project was developed as part of the Full Stack Open CI/CD module.  
-The main goal was to learn how to build a modern continuous integration and continuous deployment pipeline using GitHub Actions and Render.
+## 🔗 Links
 
+- 🌐 **Deployed Pokedex:** [https://cicdfso.onrender.com](https://cicdfso.onrender.com)
+- 📁 **Pokedex App Repository:** [https://github.com/Nyukaa/CiCdFSO](https://github.com/Nyukaa/CiCdFSO)
+- 📦 **Exercise Repository (11.21–11.22):** [https://github.com/Nyukaa/Language-Learning-App](https://github.com/Nyukaa/Language-Learning-App)
 ---
+
+  
 
 ## 🚀 What this project includes
 
